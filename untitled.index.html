@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>মো: জাহিদ হাসান — পোর্টফো<meta name="google-site-verification" content="8VKeos7owRozi6Gd-x_VCg4VBpglM4ByeGNJ2RUUMnU" />লিও</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f8fafc;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --accent: #0f766e;
+      --accent-hover: #115e59;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Hind Siliguri', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header & Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.98rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 1.15rem;
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-header {
+      margin-bottom: 34px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      margin-top: 6px;
+      max-width: 600px;
+    }
+
+    /* Hero / Homepage */
+    .hero {
+      padding: 90px 0 76px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.1rem, 5vw, 3.3rem);
+      line-height: 1.25;
+      font-weight: 700;
+      max-width: 780px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      font-size: 1.08rem;
+      color: var(--muted);
+      max-width: 620px;
+      margin-bottom: 30px;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 22px;
+      border-radius: 10px;
+      font-size: 0.98rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+    }
+
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: #f1f5f9;
+    }
+
+    /* About Me */
+    .about-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .about-card p {
+      font-size: 1.05rem;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .about-card .sub {
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .info-list {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .info-list li {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-size: 0.96rem;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+    }
+
+    .skill-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 14px;
+      color: var(--accent);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 0.92rem;
+      padding: 6px 12px;
+      border-radius: 8px;
+    }
+
+    /* Highlights / Experience */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .project-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    .project-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    /* Contact */
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 36px;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 32px;
+    }
+
+    .contact-info p {
+      color: var(--muted);
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .contact-details div {
+      margin-bottom: 10px;
+      font-size: 0.96rem;
+      word-break: break-word;
+    }
+
+    .contact-details a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-details a:hover {
+      text-decoration: underline;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      font-family: inherit;
+      font-size: 0.96rem;
+      color: var(--text);
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .form-status {
+      font-size: 0.92rem;
+      color: var(--accent);
+      font-weight: 500;
+      min-height: 22px;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 26px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* Mobile-Friendly */
+    @media (max-width: 860px) {
+      .about-card,
+      .skills-grid,
+      .projects-grid,
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-box,
+      .about-card {
+        padding: 24px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        padding: 16px 20px;
+        gap: 14px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hero {
+        padding: 64px 0 56px;
+      }
+
+      section {
+        padding: 58px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#home" class="logo">মো: জাহিদ হাসান</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="মেনু">☰</button>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">হোম</a></li>
+          <li><a href="#about">আমার সম্পর্কে</a></li>
+          <li><a href="#skills">দক্ষতা</a></li>
+          <li><a href="#highlights">কর্মক্ষেত্র</a></li>
+          <li><a href="#contact">যোগাযোগ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Homepage / Hero -->
+    <section class="hero" id="home">
+      <div class="container">
+        <span class="hero-badge">পেশাদারিত্ব ও দায়িত্বশীলতা</span>
+        <h1>আসসালামু আলাইকুম, আমি <span>মো: জাহিদ হাসান</span></h1>
+        <p>
+          প্রাইভেট জবে কর্মরত একজন দায়িত্বশীল পেশাজীবী। নিরাপত্তা, ফায়ার ফাইটিং এবং বহু ভাষায় যোগাযোগের দক্ষতা নিয়ে কাজ করতে আগ্রহী।
+        </p>
+        <div class="btn-group">
+          <a href="#about" class="btn btn-primary">আমার সম্পর্কে জানুন</a>
+          <a href="#contact" class="btn btn-secondary">যোগাযোগ করুন</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">আমার সম্পর্কে</h2>
+        </div>
+        <div class="about-card">
+          <div>
+            <p>আমি আমার পেশাদারিত্বকে ভালোবাসি এবং সবার সাথে মিশতে পছন্দ করি।</p>
+            <p class="sub">
+              দায়িত্ব পালন, সময়ানুবর্তিতা এবং সহকর্মী ও মানুষের সাথে সুসম্পর্ক বজায় রেখে কাজ করাই আমার প্রধান লক্ষ্য।
+            </p>
+          </div>
+          <ul class="info-list">
+            <li><strong>নাম:</strong> মো: জাহিদ হাসান</li>
+            <li><strong>পেশা:</strong> প্রাইভেট জব</li>
+            <li><strong>ভাষা:</strong> বাংলা, ইংরেজি, আরবি, উর্দু, হিন্দি</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Skills</span>
+          <h2 class="section-title">আমার দক্ষতা</h2>
+          <p class="section-subtitle">নিরাপত্তা, জরুরি সাড়া প্রদান এবং বিভিন্ন ভাষায় সাবলীল যোগাযোগ।</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3>ফায়ার ফাইটিং</h3>
+            <div class="tags">
+              <span class="tag">অগ্নি নির্বাপণ সচেতনতা</span>
+              <span class="tag">জরুরি সতর্কতা</span>
+              <span class="tag">নিরাপদ সাড়া প্রদান</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3>নিরাপত্তা</h3>
+            <div class="tags">
+              <span class="tag">নিরাপত্তা তদারকি</span>
+              <span class="tag">পেশাদার দায়িত্বশীলতা</span>
+              <span class="tag">টিমওয়ার্ক</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3>ভাষাগত দক্ষতা (৫টি ভাষা)</h3>
+            <div class="tags">
+              <span class="tag">বাংলা</span>
+              <span class="tag">ইংরেজি</span>
+              <span class="tag">আরবি</span>
+              <span class="tag">উর্দু</span>
+              <span class="tag">হিন্দি</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights / Experience -->
+    <section id="highlights">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Highlights</span>
+          <h2 class="section-title">কাজের মূল বৈশিষ্ট্য</h2>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3>নিরাপত্তা ও সতর্কতা</h3>
+            <p>কর্মক্ষেত্রে শৃঙ্খলা, নিরাপত্তা বিধি অনুসরণ এবং যেকোনো পরিস্থিতিতে দায়িত্বশীল আচরণ বজায় রাখা।</p>
+          </article>
+
+          <article class="project-card">
+            <h3>ফায়ার ফাইটিং প্রস্তুতি</h3>
+            <p>জরুরি মুহূর্তে দ্রুত ও সচেতনভাবে সাড়া দেওয়ার মানসিকতা এবং নিরাপত্তা সচেতনতায় গুরুত্ব দেওয়া।</p>
+          </article>
+
+          <article class="project-card">
+            <h3>সহজ ও সাবলীল যোগাযোগ</h3>
+            <p>বাংলা, ইংরেজি, আরবি, উর্দু ও হিন্দি—এই পাঁচ ভাষায় কথা বলার সক্ষমতা থাকায় ভিন্ন পরিবেশে সহজেই মিশতে পারি।</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <div class="contact-info">
+            <span class="section-tag">Contact</span>
+            <h2 class="section-title">যোগাযোগ করুন</h2>
+            <p>প্রয়োজনে নিচের ইমেইল, ফেইসবুক লিংক অথবা মেসেজ ফর্মের মাধ্যমে যোগাযোগ করতে পারেন।</p>
+            <div class="contact-details">
+              <div><strong>ইমেইল:</strong> <a href="mailto:zahidhasan01572@gmail.com">zahidhasan01572@gmail.com</a></div>
+              <div><strong>ফেইসবুক:</strong> <a href="https://www.facebook.com/share/1JhWTnkH8e/" target="_blank" rel="noopener noreferrer">Facebook Profile</a></div>
+            </div>
+          </div>
+
+          <form id="contactForm">
+            <input type="text" id="name" placeholder="আপনার নাম" required />
+            <input type="email" id="email" placeholder="আপনার ইমেইল" required />
+            <textarea id="message" rows="4" placeholder="আপনার বার্তা লিখুন..." required></textarea>
+            <button type="submit" class="btn btn-primary">বার্তা পাঠান</button>
+            <div class="form-status" id="formStatus"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> মো: জাহিদ হাসান। সর্বস্বত্ব সংরক্ষিত।</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+    const yearEl = document.getElementById('year');
+
+    yearEl.textContent = new Date().getFullYear();
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      formStatus.textContent = `ধন্যবাদ, ${name}! আপনার বার্তাটি তৈরি হয়েছে।`;
+      contactForm.reset();
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>মো: জাহিদ হাসান — পোর্টফোলিও</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f8fafc;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --accent: #0f766e;
+      --accent-hover: #115e59;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Hind Siliguri', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header & Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.98rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 1.15rem;
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-header {
+      margin-bottom: 34px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      margin-top: 6px;
+      max-width: 600px;
+    }
+
+    /* Hero / Homepage */
+    .hero {
+      padding: 90px 0 76px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.1rem, 5vw, 3.3rem);
+      line-height: 1.25;
+      font-weight: 700;
+      max-width: 780px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      font-size: 1.08rem;
+      color: var(--muted);
+      max-width: 620px;
+      margin-bottom: 30px;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 22px;
+      border-radius: 10px;
+      font-size: 0.98rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+    }
+
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: #f1f5f9;
+    }
+
+    /* About Me */
+    .about-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .about-card p {
+      font-size: 1.05rem;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .about-card .sub {
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .info-list {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .info-list li {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-size: 0.96rem;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+    }
+
+    .skill-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 14px;
+      color: var(--accent);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 0.92rem;
+      padding: 6px 12px;
+      border-radius: 8px;
+    }
+
+    /* Highlights / Experience */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .project-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    .project-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    /* Contact */
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 36px;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 32px;
+    }
+
+    .contact-info p {
+      color: var(--muted);
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .contact-details div {
+      margin-bottom: 10px;
+      font-size: 0.96rem;
+      word-break: break-word;
+    }
+
+    .contact-details a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-details a:hover {
+      text-decoration: underline;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      font-family: inherit;
+      font-size: 0.96rem;
+      color: var(--text);
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .form-status {
+      font-size: 0.92rem;
+      color: var(--accent);
+      font-weight: 500;
+      min-height: 22px;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 26px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* Mobile-Friendly */
+    @media (max-width: 860px) {
+      .about-card,
+      .skills-grid,
+      .projects-grid,
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-box,
+      .about-card {
+        padding: 24px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        padding: 16px 20px;
+        gap: 14px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hero {
+        padding: 64px 0 56px;
+      }
+
+      section {
+        padding: 58px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#home" class="logo">মো: জাহিদ হাসান</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="মেনু">☰</button>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">হোম</a></li>
+          <li><a href="#about">আমার সম্পর্কে</a></li>
+          <li><a href="#skills">দক্ষতা</a></li>
+          <li><a href="#highlights">কর্মক্ষেত্র</a></li>
+          <li><a href="#contact">যোগাযোগ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Homepage / Hero -->
+    <section class="hero" id="home">
+      <div class="container">
+        <span class="hero-badge">পেশাদারিত্ব ও দায়িত্বশীলতা</span>
+        <h1>আসসালামু আলাইকুম, আমি <span>মো: জাহিদ হাসান</span></h1>
+        <p>
+          প্রাইভেট জবে কর্মরত একজন দায়িত্বশীল পেশাজীবী। নিরাপত্তা, ফায়ার ফাইটিং এবং বহু ভাষায় যোগাযোগের দক্ষতা নিয়ে কাজ করতে আগ্রহী।
+        </p>
+        <div class="btn-group">
+          <a href="#about" class="btn btn-primary">আমার সম্পর্কে জানুন</a>
+          <a href="#contact" class="btn btn-secondary">যোগাযোগ করুন</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">আমার সম্পর্কে</h2>
+        </div>
+        <div class="about-card">
+          <div>
+            <p>আমি আমার পেশাদারিত্বকে ভালোবাসি এবং সবার সাথে মিশতে পছন্দ করি।</p>
+            <p class="sub">
+              দায়িত্ব পালন, সময়ানুবর্তিতা এবং সহকর্মী ও মানুষের সাথে সুসম্পর্ক বজায় রেখে কাজ করাই আমার প্রধান লক্ষ্য।
+            </p>
+          </div>
+          <ul class="info-list">
+            <li><strong>নাম:</strong> মো: জাহিদ হাসান</li>
+            <li><strong>পেশা:</strong> প্রাইভেট জব</li>
+            <li><strong>ভাষা:</strong> বাংলা, ইংরেজি, আরবি, উর্দু, হিন্দি</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Skills</span>
+          <h2 class="section-title">আমার দক্ষতা</h2>
+          <p class="section-subtitle">নিরাপত্তা, জরুরি সাড়া প্রদান এবং বিভিন্ন ভাষায় সাবলীল যোগাযোগ।</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3>ফায়ার ফাইটিং</h3>
+            <div class="tags">
+              <span class="tag">অগ্নি নির্বাপণ সচেতনতা</span>
+              <span class="tag">জরুরি সতর্কতা</span>
+              <span class="tag">নিরাপদ সাড়া প্রদান</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3>নিরাপত্তা</h3>
+            <div class="tags">
+              <span class="tag">নিরাপত্তা তদারকি</span>
+              <span class="tag">পেশাদার দায়িত্বশীলতা</span>
+              <span class="tag">টিমওয়ার্ক</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3>ভাষাগত দক্ষতা (৫টি ভাষা)</h3>
+            <div class="tags">
+              <span class="tag">বাংলা</span>
+              <span class="tag">ইংরেজি</span>
+              <span class="tag">আরবি</span>
+              <span class="tag">উর্দু</span>
+              <span class="tag">হিন্দি</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights / Experience -->
+    <section id="highlights">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Highlights</span>
+          <h2 class="section-title">কাজের মূল বৈশিষ্ট্য</h2>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3>নিরাপত্তা ও সতর্কতা</h3>
+            <p>কর্মক্ষেত্রে শৃঙ্খলা, নিরাপত্তা বিধি অনুসরণ এবং যেকোনো পরিস্থিতিতে দায়িত্বশীল আচরণ বজায় রাখা।</p>
+          </article>
+
+          <article class="project-card">
+            <h3>ফায়ার ফাইটিং প্রস্তুতি</h3>
+            <p>জরুরি মুহূর্তে দ্রুত ও সচেতনভাবে সাড়া দেওয়ার মানসিকতা এবং নিরাপত্তা সচেতনতায় গুরুত্ব দেওয়া।</p>
+          </article>
+
+          <article class="project-card">
+            <h3>সহজ ও সাবলীল যোগাযোগ</h3>
+            <p>বাংলা, ইংরেজি, আরবি, উর্দু ও হিন্দি—এই পাঁচ ভাষায় কথা বলার সক্ষমতা থাকায় ভিন্ন পরিবেশে সহজেই মিশতে পারি।</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <div class="contact-info">
+            <span class="section-tag">Contact</span>
+            <h2 class="section-title">যোগাযোগ করুন</h2>
+            <p>প্রয়োজনে নিচের ইমেইল, ফেইসবুক লিংক অথবা মেসেজ ফর্মের মাধ্যমে যোগাযোগ করতে পারেন।</p>
+            <div class="contact-details">
+              <div><strong>ইমেইল:</strong> <a href="mailto:zahidhasan01572@gmail.com">zahidhasan01572@gmail.com</a></div>
+              <div><strong>ফেইসবুক:</strong> <a href="https://www.facebook.com/share/1JhWTnkH8e/" target="_blank" rel="noopener noreferrer">Facebook Profile</a></div>
+            </div>
+          </div>
+
+          <form id="contactForm">
+            <input type="text" id="name" placeholder="আপনার নাম" required />
+            <input type="email" id="email" placeholder="আপনার ইমেইল" required />
+            <textarea id="message" rows="4" placeholder="আপনার বার্তা লিখুন..." required></textarea>
+            <button type="submit" class="btn btn-primary">বার্তা পাঠান</button>
+            <div class="form-status" id="formStatus"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> মো: জাহিদ হাসান। সর্বস্বত্ব সংরক্ষিত।</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+    const yearEl = document.getElementById('year');
+
+    yearEl.textContent = new Date().getFullYear();
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      formStatus.textContent = `ধন্যবাদ, ${name}! আপনার বার্তাটি তৈরি হয়েছে।`;
+      contactForm.reset();
+    });
+  </script>
+</body>
+</html>
